@@ -17,6 +17,7 @@ public enum CoreDataVersionExtractor {
     /// - Throws: In case can not find the .xcurrentversion file.
     /// - Returns: Current version of data model.
     public static func version(fromVersionFileAtPath filePath: AbsolutePath) throws -> String {
+        print("test")
         do {
             let data = try Data(contentsOf: filePath.appending(component: ".xccurrentversion").url)
             let decoder = PropertyListDecoder()
